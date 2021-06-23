@@ -1,0 +1,29 @@
+{
+  "listeners": {
+    "*:9000": {
+      "pass": "routes"
+    }
+  },
+  "routes": [
+    {
+      "match": {
+        "uri": "!/index.php"
+      },
+      "action": {
+        "share": "/opt/code/public/",
+        "fallback": {
+          "pass": "applications/thinkphp"
+        }
+      }
+    }
+  ],
+  "applications": {
+    "thinkphp": {
+      "type": "php",
+      "user": "root",
+      "group": "root",
+      "root": "/opt/code/public/",
+      "script": "index.php"
+    }
+  }
+}

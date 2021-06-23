@@ -1,0 +1,22 @@
+edition: 1.0.0
+name: functionApp
+access: "{{ access }}"
+
+services:
+  thinkphpExample:
+    component: devsapp/thinkphp
+    actions:
+      pre-deploy: # 在deploy之前运行
+        - run: composer install
+          path: ./code
+    props:
+      region: cn-shenzhen
+      service:
+        name: serverless-devs-thinkphp
+        description: Serverless Devs示例程序
+      function:
+        name: thinkphp
+        description: thinkphp项目
+        memorySize: 256
+        code:
+          src: ./thinkphp
