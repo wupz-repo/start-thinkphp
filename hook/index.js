@@ -15,9 +15,9 @@ async function postInit(inputObj) {
      This application requires to open these services: 
          FC : https://fc.console.aliyun.com/
          ACR: https://cr.console.aliyun.com/
-     This application can help you quickly deploy the Laravel project:
+     This application can help you quickly deploy the ThinkPHP project:
          Full yaml configuration: https://github.com/devsapp/thinkphp
-         thinkphp development docs : https://docs.topthink.com/think-api/1835085
+         ThinkPHP development docs : https://docs.topthink.com/think-api/1835085
      This application homepage: https://github.com/devsapp/start-thinkphp\n`)
 }
 
